@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {{object}}
+    <br>
+    {{name|upper|truncatewords:2}}
+____
+    {{csrf_token}}
+
+    <br>
+    {% filter force_escape|lower %}
+        This text will be HTML-escaped, and will appear in all lowercase.
+    {% endfilter %}
+
+    <br>
+    <a href="{% url 'logout' %}">aquí</a>
+</body>
+</html>
